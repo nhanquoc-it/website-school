@@ -42,7 +42,7 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100vw;
+  max-width: 100%;
   height: 100vh;
   position: relative;
 }
@@ -125,8 +125,9 @@ header {
   margin: 12px 0;
 }
 .header-text button {
-  width: 150px;
+  min-width: 150px;
   height: 40px;
+  padding: 10px 30px;
   margin-top: 20px;
   border: 2px solid var(--primary-color);
   cursor: pointer;
@@ -137,16 +138,124 @@ header {
   transition: background 0.2s ease;
 }
 .header-text button:hover {
-  background-color: var(--primary-color);
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
 }
 .logo-mobile,
 .navbar-toggle-mobile,
 .navbar-close-mobile {
   display: none;
 }
+/*============================= Features CSS =============================*/
+.features {
+  padding: 50px 0;
+  background-image: url("./image/bg-features.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 100%;
+  height: auto;
+}
+.features-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+}
+.features-heading span,
+.heading-icon {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+.heading-icon {
+  margin-right: 30px;
+}
+.features-list {
+  justify-content: space-between;
+}
+.features-item {
+  width: 20%;
+  text-align: center;
+  padding: 20px 10px;
+  transition: all 0.2s ease;
+}
+.features-item:hover {
+  box-shadow: 1px 1px 5px 5px var(--primary-color);
+}
+.features-item h2 {
+  font-size: 2.4rem;
+  color: var(--primary-color);
+  margin-bottom: 14px;
+}
+.features-item p {
+  font-size: 1.6rem;
+  color: var(--white);
+}
+.features-icon {
+  font-size: 6rem;
+  color: #eeee22;
+  margin-bottom: 32px;
+}
+/*============================= Admissions CSS =============================*/
+.admissions {
+  padding: 50px 0;
+  background-image: url("./image/co-so-2-bvu.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 100%;
+  height: auto;
+}
+.features-admissions i,
+.features-admissions span {
+  color: var(--white);
+}
+.admissions-list {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+.admissions-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  font-size: 2.4rem;
+  font-weight: bold;
+  width: 200px;
+  height: 200px;
+  border: 4px solid var(--white);
+}
+.admissions-action {
+  text-align: center;
+  margin: 70px 0;
+}
+.admissions-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 30px;
+  max-width: 400px;
+  font-size: 2.4rem;
+  font-weight: 600;
+  border: 2px solid var(--primary-color);
+  color: var(--white);
+  transition: background-color 0.2s ease;
+}
+.admissions-btn span {
+  margin-left: 8px;
+}
+.admissions-btn:hover {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+}
+
 /*============================= Responsive CSS =============================*/
-/* Header */
+/*============ Mobile ============*/
 @media (max-width: 575px) {
+  /* Header */
   .header-top {
     padding: 10px 20px 0;
   }
@@ -202,5 +311,17 @@ header {
   }
   .header-text {
     width: 80%;
+  }
+  /* Features */
+  .features-item {
+    width: 100%;
+  }
+  /* Admissions */
+  .admissions-item {
+    width: 90%;
+  }
+  .admissions-btn {
+    padding: 10px 16px;
+    max-width: 380px;
   }
 }
