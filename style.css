@@ -258,9 +258,10 @@ header {
   color: var(--primary-color);
   background-color: var(--secondary-color);
 }
-/*============================= News & Experience CSS =============================*/
+/*============================= News & Experience & Press Media CSS =============================*/
 .news,
-.experience {
+.experience,
+.press-media {
   padding: 50px 0;
 }
 .features-news i,
@@ -342,6 +343,51 @@ header {
 .new {
   width: 30px;
   height: 15px;
+}
+/*============================= SlideShow Brands =============================*/
+.slideshow-brands {
+  overflow: hidden;
+  padding: 60px 0;
+  background-color: #192f59;
+  white-space: nowrap;
+  position: relative;
+}
+.slideshow-brands::before,
+.slideshow-brands::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 20px;
+  height: 100%;
+  z-index: 2;
+}
+.slideshow-brands::before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), var(--white));
+}
+.slideshow-brands::after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), var(--white));
+}
+.images-list {
+  display: inline-block;
+  animation: 20s slide infinite linear;
+}
+.slideshow-brands:hover .images-list {
+  animation-play-state: paused;
+}
+.image-item {
+  height: 60px;
+  margin: 0 20px;
+  background-color: var(--white);
+}
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
 
 /*============================= Responsive CSS =============================*/

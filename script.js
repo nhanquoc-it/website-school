@@ -9,3 +9,7 @@ closeMenuBar.addEventListener("click", function () {
   document.querySelector(".navbar").style.transform = "translateX(100%)";
   document.querySelector(".navbar").style.opacity = "0";
 });
+
+// Copy SlideShow Brands
+var copyHTMLSlide = document.querySelector(".images-list").cloneNode(true);
+document.querySelector(".slideshow-brands").appendChild(copyHTMLSlide);
