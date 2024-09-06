@@ -10,6 +10,8 @@
   --white: #fff;
   --black: #000;
   --text-heading: #444444;
+  --bg-color: #192f59;
+  --text-color: #eeee22;
 }
 * {
   padding: 0;
@@ -261,7 +263,8 @@ header {
 /*============================= News & Experience & Press Media CSS =============================*/
 .news,
 .experience,
-.press-media {
+.press-media,
+.video {
   padding: 50px 0;
 }
 .features-news i,
@@ -348,7 +351,7 @@ header {
 .slideshow-brands {
   overflow: hidden;
   padding: 60px 0;
-  background-color: #192f59;
+  background-color: var(--bg-color);
   white-space: nowrap;
   position: relative;
 }
@@ -388,6 +391,97 @@ header {
   to {
     transform: translateX(-100%);
   }
+}
+/*============================= Video Features CSS =============================*/
+.video-embed {
+  display: flex;
+  gap: 20px;
+  padding: 0 20px;
+}
+.column-left {
+  flex: 1;
+  background-color: var(--black);
+}
+.column-right {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.video-column {
+  flex: 1;
+  background-color: var(--black);
+}
+.video-item {
+  height: 240px;
+}
+/*============================= FOOTER CSS =============================*/
+.footer {
+  background-color: var(--bg-color);
+}
+.footer-row {
+  padding: 30px 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer-column {
+  flex: 1;
+  margin: 10px;
+  /* background-color: #ffffff; */
+}
+.footer-title {
+  color: var(--text-color);
+  font-size: 1.7rem;
+  font-weight: 700;
+  padding: 10px 0;
+  border-bottom: 2px solid var(--primary-color);
+  margin-bottom: 25px;
+}
+
+.footer-item a {
+  display: block;
+  padding: 8px 0;
+  font-size: 1.6rem;
+  color: var(--white);
+  transition: color 0.2s ease;
+}
+.footer-item:hover a {
+  color: var(--text-color);
+}
+.footer-socials {
+  margin: 10px 0;
+}
+.social-heading {
+  font-size: 1.6rem;
+  color: var(--white);
+  text-align: center;
+}
+.social-list {
+  display: flex;
+  justify-content: center;
+}
+.social-item {
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+}
+.social-image {
+  width: 100%;
+  object-fit: cover;
+}
+.footer-author {
+  background-color: #202020;
+  text-align: center;
+  padding: 20px 10px;
+}
+.footer-text {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: var(--white);
+}
+.text-strong {
+  color: var(--text-color);
+  font-weight: bold;
 }
 
 /*============================= Responsive CSS =============================*/
@@ -474,5 +568,19 @@ header {
   }
   .post-link {
     max-width: 260px;
+  }
+  /* Video Embed */
+  .video-embed {
+    flex-direction: column;
+  }
+  .column-right {
+    width: 100%;
+  }
+  .video-item {
+    height: 200px;
+  }
+  /* Footer */
+  .footer-row {
+    display: block;
   }
 }
